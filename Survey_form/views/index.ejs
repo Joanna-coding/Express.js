@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" >
+            <title>Survey Form</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        *{
+            margin: 0px auto;
+        }
+        #wrapper{
+            margin-top:10px;
+            width: 600px;
+            height: 450px;
+            border: 1px solid black;
+        }
+
+        form{
+            margin-top:10px;
+        }
+    </style>
+    <body>
+        <div id = "wrapper">
+            <div class="container">
+                <form action='/results' method='post'>
+                    <div class="form-group row">
+                        <label for="input" class="col-sm-5 col-form-label">Your Name:</label>
+                        <div class="col-sm-6">
+                        <input type="text" class="form-control" name="name" placeholder="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="input" class="col-sm-5 col-form-label">Dojo Location:</label>
+                        <div class="col-sm-6">
+                                <select class="custom-select mr-sm-2" name="location">
+                                    <option selected>Mountain View</option>
+                                    <option >San jose</option>
+                                    <option >Florida</option>
+                                    <option >New york</option>
+                                 </select>
+                        
+                        </div>
+                    </div> 
+
+                    <div class="form-group row">
+                            <label for="input" class="col-sm-5 col-form-label">Favorite Language:</label>
+                            <div class="col-sm-6">
+                                <select class="custom-select mr-sm-2" name="language">
+                                    <option  selected>Javacript</option>
+                                    <option >Java</option>
+                                    <option >Python</option>
+                                    <option >Ruby</option>
+                                </select>
+                            
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        <label for="input" class="col-sm-5 col-form-label">Comment (optional):</label>
+                        <textarea class="form-control rounded-0" name="comment" rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

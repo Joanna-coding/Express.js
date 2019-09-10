@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            #container{
+                width: 50%;
+                margin:  0px auto;
+                border: 1px solid lightgrey;
+                background-color: lightgrey;
+                border-radius: 1em;
+            }
+
+            form{
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Dojo Suvey</h1>
+        <div id="container">
+             <form  action="/create" method="post">
+                <div class="form-group row">
+                        <label for="desc">Your Name:</label>
+                        <input type="text" class="form-control" name = "first_name">
+                       
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleFormControlSelect1">Dojo Location:</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name = "location">
+                            <option>San Jose</option>
+                            <option>Florida</option>
+                            <option>Berkerly</option>
+                            <option>San Fransico</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="exampleFormControlSelect1" >Favorite Language:</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name = "language">
+                            <option>Python</option>
+                            <option>Java</option>
+                            <option>Ruby</option>
+                            <option>JavaScript</option>
+                        </select>
+                     </div>
+                    
+                    <div class="form-group row">
+                        <label for="exampleFormControlTextarea1">Comment(oprional):</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "text"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
+
+    </body>
+</html>
